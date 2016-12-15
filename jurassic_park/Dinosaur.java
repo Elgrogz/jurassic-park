@@ -11,6 +11,40 @@ abstract class Dinosaur {
     this.popularityLevel = popularityLevel;
   }
 
-  
-  
+  public String getName() {
+    return this.name;
+  }
+
+  public String getType() {
+    return this.type;
+  }
+
+  public int getFoodLevel() {
+    return this.foodlevel;
+  }
+
+  public int getPopularityLevel() {
+    return this.popularityLevel;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  public void setFoodLevel(int foodLevel) {
+    this.foodLevel = foodLevel;
+  }
+
+  public void setPopularityLevel(int popularityLevel) {
+    this.popularityLevel = popularityLevel;
+  }
+
+  public void eat() {
+    
+  }
+
 }
