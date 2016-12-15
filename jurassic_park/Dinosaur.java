@@ -1,12 +1,12 @@
 abstract class Dinosaur {
-  String name;
-  String type;
+  // String name;
+  // String type;
   int foodLevel;
   int popularityLevel;
 
-  public Dinosaur(String name, String type, int popularityLevel) {
-    this.name = name;
-    this.type = type;
+  public Dinosaur(int popularityLevel) {
+    // this.name = name;
+    // this.type = type;
     this.foodlevel = 5;
     this.popularityLevel = popularityLevel;
   }
@@ -56,8 +56,9 @@ abstract class Dinosaur {
     if (this.foodLevel > 5) {
       this.foodLevel = 5;
     }
-    else if (this.foodLevel < 0) {
+    else if (this.foodLevel < 1) {
       this.foodLevel = 0
+      rampage();
     }
   }
 
