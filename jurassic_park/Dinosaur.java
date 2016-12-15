@@ -37,6 +37,7 @@ abstract class Dinosaur {
 
   public void setFoodLevel(int foodLevel) {
     this.foodLevel = foodLevel;
+    checkFood();
   }
 
   public void setPopularityLevel(int popularityLevel) {
@@ -44,7 +45,24 @@ abstract class Dinosaur {
   }
 
   public void eat() {
-    
+    setFoodLevel(5);
+  }
+
+  public void takeACrap() {
+    setFoodLevel -= 1; 
+  }
+
+  public void checkFood() {
+    if (this.foodLevel > 5) {
+      this.foodLevel = 5;
+    }
+    else if (this.foodLevel < 0) {
+      this.foodLevel = 0
+    }
+  }
+
+  public void rampage() {
+
   }
 
 }
