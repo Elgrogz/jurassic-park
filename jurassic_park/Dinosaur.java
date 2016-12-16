@@ -1,26 +1,23 @@
-abstract class Dinosaur {
-  // String name;
-  // String type;
+package jurassic_park;
+
+public abstract class Dinosaur {
+
+  String name;
   int foodLevel;
   int popularityLevel;
 
-  public Dinosaur(int popularityLevel) {
-    // this.name = name;
-    // this.type = type;
-    this.foodlevel = 5;
+  public Dinosaur(String name) {
+    this.name = name;
+    this.foodLevel = 5;
     this.popularityLevel = popularityLevel;
   }
 
   public String getName() {
     return this.name;
-  }
-
-  public String getType() {
-    return this.type;
-  }
+  } 
 
   public int getFoodLevel() {
-    return this.foodlevel;
+    return this.foodLevel;
   }
 
   public int getPopularityLevel() {
@@ -29,10 +26,6 @@ abstract class Dinosaur {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public void setType(String type) {
-    this.type = type;
   }
 
   public void setFoodLevel(int foodLevel) {
@@ -49,7 +42,7 @@ abstract class Dinosaur {
   }
 
   public void takeACrap() {
-    setFoodLevel -= 1; 
+    this.foodLevel -= 1; 
   }
 
   public void checkFood() {
@@ -57,7 +50,7 @@ abstract class Dinosaur {
       this.foodLevel = 5;
     }
     else if (this.foodLevel < 1) {
-      this.foodLevel = 0
+      this.foodLevel = 0;
       rampage();
     }
   }
