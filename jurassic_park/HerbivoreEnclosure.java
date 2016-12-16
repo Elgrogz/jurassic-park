@@ -1,2 +1,2 @@
-package jurassic_world;
+package jurassic_park;
 

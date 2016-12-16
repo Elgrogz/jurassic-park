@@ -1,13 +1,15 @@
-package jurassic_park;
+package jurassic_park; 
+import java.util.*;
 
 public abstract class Enclosure {
 
   String name;
   Boolean damaged;
 
-  public Enclosure(String Name)
+  public Enclosure(String Name) {
     this.name = name;
     this.damaged = false;
+  }
 
 
   public String getName() {
@@ -20,10 +22,6 @@ public abstract class Enclosure {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public int getSize() {
-    return dinosaurs.getSize();
   }
   
   public void damage() {
