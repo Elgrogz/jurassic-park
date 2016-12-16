@@ -18,5 +18,4 @@ public class CarnivoreEnclosure extends Enclosure {
     dinosaurs.add(carnivore);
   }
 
-
 }

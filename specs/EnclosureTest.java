@@ -14,6 +14,9 @@ public class EnclosureTest {
   Saltopus saltopus;
   Mosasaurus mosasaurus;
   CarnivoreEnclosure carnivoreEnclosure;
+  HerbivoreEnclosure herbivoreEnclosure;
+  Aquarium aquarium;
+  Aviary aviary;
 
   @Before
   public void before() {
@@ -26,6 +29,9 @@ public class EnclosureTest {
     saltopus = new Saltopus("Mary");
     mosasaurus = new Mosasaurus("Oliver");
     carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
+    herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
+    aquarium = new Aquarium("Aquarium");
+    aviary = new Aviary("Aviary");
   }
 
   @Test
@@ -39,9 +45,27 @@ public class EnclosureTest {
   }
 
   @Test
-  public void canAddDinosaur() {
+  public void canAddCarnivore() {
      carnivoreEnclosure.addDinosaur(trex);
      assertEquals(1, carnivoreEnclosure.getSize()); 
   }
+
+  @Test
+  public void canAddHerbivore() {
+    herbivoreEnclosure.addDinosaur(tricerotops);
+    assertEquals(1, herbivoreEnclosure.getSize()); 
+  }
+
+  @Test
+  public void canAddSwimmer() {
+    aquarium.addDinosaur(mosasaurus);
+    assertEquals(1, aquarium.getSize()); 
+  }
+
+  @Test
+  public void canAddFlyer() {
+    aviary.addDinosaur(pterodactyl);
+    assertEquals(1, aviary.getSize()); 
+  }     
 
 }
