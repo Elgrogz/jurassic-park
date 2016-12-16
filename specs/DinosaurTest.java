@@ -16,4 +16,14 @@ public class DinosaurTest {
     assertEquals("Jeff", trex.getName());
   }
 
+  @Test
+  public void canGetFoodLevel() {
+    assertEquals(5, trex.getFoodLevel());
+  }
+
+  @Test
+  public void canGetPopularityLevel() {
+    assertEquals(5, trex.getPopularityLevel());
+  }
+
 }
