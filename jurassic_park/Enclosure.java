@@ -6,7 +6,7 @@ public abstract class Enclosure {
   String name;
   Boolean damaged;
 
-  public Enclosure(String Name) {
+  public Enclosure(String name) {
     this.name = name;
     this.damaged = false;
   }

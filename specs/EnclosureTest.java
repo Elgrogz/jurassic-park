@@ -29,5 +29,13 @@ public class EnclosureTest {
   }
 
   @Test
+  public void canGetEnclosureName() {
+    assertEquals("T-rex cage", carnivoreEnclosure.getName());
+  }
+
+  @Test
+  public void canGetEnclosureSize() {
+    assertEquals(0, carnivoreEnclosure.getSize());
+  }
 
 }
