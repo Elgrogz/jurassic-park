@@ -11,7 +11,6 @@ public abstract class Enclosure {
     this.damaged = false;
   }
 
-
   public String getName() {
     return this.name;
   } 

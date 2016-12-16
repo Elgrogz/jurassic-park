@@ -72,4 +72,9 @@ public class DinosaurTest {
     assertEquals(5, mosasaurus.getFoodLevel());
   }
 
+  @Test
+  public void canGetInfo() {
+    assertEquals("Name: Wendy, Current Food Level: 5", pterodactyl.info());
+  }
+
 }

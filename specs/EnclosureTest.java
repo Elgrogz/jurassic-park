@@ -38,4 +38,10 @@ public class EnclosureTest {
     assertEquals(0, carnivoreEnclosure.getSize());
   }
 
+  @Test
+  public void canAddDinosaur() {
+     carnivoreEnclosure.addDinosaur(trex);
+     assertEquals(1, carnivoreEnclosure.getSize()); 
+  }
+
 }

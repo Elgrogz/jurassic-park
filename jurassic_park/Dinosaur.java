@@ -57,6 +57,10 @@ public abstract class Dinosaur {
 
   public void rampage() {
 
+  } 
+
+  public String info() {
+    return "Name: " + getName() + ", Current Food Level: " + getFoodLevel();
   }
 
 }

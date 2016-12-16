@@ -14,7 +14,9 @@ public class CarnivoreEnclosure extends Enclosure {
     return dinosaurs.size();
   }
 
-  public void addDinosaur(Carnivore carnivore) {
+  public void addDinosaur(Carnivore carnivore) {  
     dinosaurs.add(carnivore);
   }
+
+
 }
