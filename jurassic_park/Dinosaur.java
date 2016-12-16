@@ -30,7 +30,7 @@ public abstract class Dinosaur {
 
   public void setFoodLevel(int foodLevel) {
     this.foodLevel = foodLevel;
-    checkFood();
+    // checkFood();
   }
 
   public void setPopularityLevel(int popularityLevel) {

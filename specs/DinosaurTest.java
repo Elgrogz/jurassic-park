@@ -26,4 +26,28 @@ public class DinosaurTest {
     assertEquals(5, trex.getPopularityLevel());
   }
 
+  @Test
+  public void canSetName() {
+    trex.setName("Bob");
+    assertEquals("Bob", trex.getName());
+  }
+
+  @Test
+  public void canSetFoodLevel() {
+    trex.setFoodLevel(3);
+    assertEquals(3, trex.getFoodLevel());
+  }
+
+  @Test
+  public void canSetPopularityLevel() {
+    trex.setPopularityLevel(2);
+    assertEquals(2, trex.getPopularityLevel());
+  }
+
+  @Test
+  public void canTakeACrap() {
+    trex.takeACrap();
+    assertEquals(4, trex.getFoodLevel());
+  }
+
 }
