@@ -5,10 +5,12 @@ import jurassic_park.*;
 public class DinosaurTest {
 
   Trex trex;
+  Stegosaurus stegosaurus;
 
   @Before
   public void before() {
     trex = new Trex("Jeff");
+    stegosaurus = new Stegosaurus("Winston");
   }
 
   @Test
@@ -46,8 +48,16 @@ public class DinosaurTest {
 
   @Test
   public void canTakeACrap() {
+    stegosaurus.takeACrap();
+    assertEquals(4, stegosaurus.getFoodLevel());
+  }
+
+  @Test
+  public void canEat() {
     trex.takeACrap();
-    assertEquals(4, trex.getFoodLevel());
+    trex.takeACrap();
+    trex.eat();
+    assertEquals(5, trex.getFoodLevel());
   }
 
 }
