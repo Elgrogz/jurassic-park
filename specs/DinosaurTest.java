@@ -6,11 +6,23 @@ public class DinosaurTest {
 
   Trex trex;
   Stegosaurus stegosaurus;
+  Tricerotops tricerotops;
+  Veloceraptor veloceraptor;
+  Pterodactyl pterodactyl;
+  Pantydraco pantydraco;
+  Saltopus saltopus;
+  Mosasaurus mosasaurus;
 
   @Before
   public void before() {
     trex = new Trex("Jeff");
     stegosaurus = new Stegosaurus("Winston");
+    tricerotops = new Tricerotops("Samuel");
+    veloceraptor = new Veloceraptor("Gordon");
+    pterodactyl = new Pterodactyl("Wendy");
+    pantydraco = new Pantydraco("Susan");
+    saltopus = new Saltopus("Mary");
+    mosasaurus = new Mosasaurus("Oliver");
   }
 
   @Test
@@ -36,14 +48,14 @@ public class DinosaurTest {
 
   @Test
   public void canSetFoodLevel() {
-    trex.setFoodLevel(3);
-    assertEquals(3, trex.getFoodLevel());
+    pantydraco.setFoodLevel(3);
+    assertEquals(3, pantydraco.getFoodLevel());
   }
 
   @Test
   public void canSetPopularityLevel() {
-    trex.setPopularityLevel(2);
-    assertEquals(2, trex.getPopularityLevel());
+    saltopus.setPopularityLevel(2);
+    assertEquals(2, saltopus.getPopularityLevel());
   }
 
   @Test
@@ -54,10 +66,10 @@ public class DinosaurTest {
 
   @Test
   public void canEat() {
-    trex.takeACrap();
-    trex.takeACrap();
-    trex.eat();
-    assertEquals(5, trex.getFoodLevel());
+    mosasaurus.takeACrap();
+    mosasaurus.takeACrap();
+    mosasaurus.eat();
+    assertEquals(5, mosasaurus.getFoodLevel());
   }
 
 }

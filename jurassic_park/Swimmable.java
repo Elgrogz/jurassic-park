@@ -1,5 +1,5 @@
 package jurassic_park;
 
-public interface Flyable {
+public interface Swimmable {
   public void swim();
 }
