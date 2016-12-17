@@ -66,6 +66,6 @@ public class EnclosureTest {
   public void canAddFlyer() {
     aviary.addDinosaur(pterodactyl);
     assertEquals(1, aviary.getSize()); 
-  }     
+  }      
 
 }
