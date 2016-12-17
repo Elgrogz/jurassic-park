@@ -41,5 +41,25 @@ public class ParkTest {
   public void canGetNumOfEscapedDinosaurs() {
     assertEquals(0, park.getNumOfEscapedDinosaurs());
   }
+
+  @Test
+  public void canAddEscapedDinosaurs() {
+    park.addEscapedDinosaur(trex);
+    assertEquals(1, park.getNumOfEscapedDinosaurs());
+  }
+
+  @Test
+  public void canAddEnclosure() {
+    park.addEnclosure(carnivoreEnclosure);
+    assertEquals(1, park.getNumOfEnclosures());
+  }
+
+  @Test
+  public void canAddDinosaurToEnclosure() {
+    carnivoreEnclosure.addDinosaur(trex);
+    park.addEnclosure(carnivoreEnclosure);
+    assertEquals(1, park.getNumOfEnclosures());
+    assertEquals(1, carnivoreEnclosure.getSize());
+  }
 }
 

@@ -5,14 +5,14 @@ public class Park {
 
   String name;
   ArrayList<Dinosaur> escapedDinosaurs;
-  ArrayList<ArrayList<Enclosure>> enclosures;
+  ArrayList<Enclosure> enclosures;
   int currentVisitors;
   int funds;
 
 
   public Park(String name) {
     this.name = name;
-    this.enclosures = new ArrayList<ArrayList<Enclosure>>();
+    this.enclosures = new ArrayList<Enclosure>();
     this.escapedDinosaurs = new ArrayList<Dinosaur>();
     this.currentVisitors = 0;
     this.funds = 0;
@@ -34,6 +34,10 @@ public class Park {
     return escapedDinosaurs.size();
   }
 
+  public int getNumOfEnclosures() {
+    return enclosures.size();
+  }
+
   public String setName(String name) {
     return this.name = name;
   }
@@ -42,7 +46,11 @@ public class Park {
     this.currentVisitors = currentVisitors;
   }
 
-  public void addDinosaur(Dinosaur dinosaur) {  
+  public void addEnclosure(Enclosure enclosure) {
+    enclosures.add(enclosure);
+  }
+
+  public void addEscapedDinosaur(Dinosaur dinosaur) {  
     escapedDinosaurs.add(dinosaur);
   }
 
