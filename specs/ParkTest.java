@@ -51,15 +51,16 @@ public class ParkTest {
   @Test
   public void canAddEnclosure() {
     park.addEnclosure(carnivoreEnclosure);
-    assertEquals(1, park.getNumOfEnclosures());
+    park.addEnclosure(herbivoreEnclosure);
+    assertEquals(2, park.getNumOfEnclosures());
+    assertEquals("Herbivore Cage", park.getEnclosureName(herbivoreEnclosure));
   }
 
   @Test
   public void canAddDinosaurToEnclosure() {
     carnivoreEnclosure.addDinosaur(trex);
     park.addEnclosure(carnivoreEnclosure);
-    assertEquals(1, park.getNumOfEnclosures());
-    assertEquals(1, carnivoreEnclosure.getSize());
+    assertEquals("T-rex cage", park.getEnclosureName(carnivoreEnclosure));
   }
 }
 

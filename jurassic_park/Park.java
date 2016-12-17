@@ -50,6 +50,16 @@ public class Park {
     enclosures.add(enclosure);
   }
 
+  public String getEnclosureName(Enclosure enclosureToFind) {
+    String nameToReturn = null;
+    for (Enclosure enclosure : enclosures) {
+      if (enclosure.getName() == enclosureToFind.getName()) {
+        nameToReturn = enclosure.getName();
+      }
+    }
+    return nameToReturn;
+  }
+
   public void addEscapedDinosaur(Dinosaur dinosaur) {  
     escapedDinosaurs.add(dinosaur);
   }
