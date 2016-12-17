@@ -22,5 +22,24 @@ public class ParkTest {
     park = new Park("Jurassic Park");
   }
 
+  @Test
+  public void canGetParkName() {
+    assertEquals("Jurassic Park", park.getName());
+  }
+
+  @Test
+  public void canGetVisitorNumbers() {
+    assertEquals(0, park.getVisitorNumbers());
+  }
+
+  @Test
+  public void canGetFunds() {
+    assertEquals(0, park.getFunds());
+  }
+
+  @Test
+  public void canGetNumOfEscapedDinosaurs() {
+    assertEquals(0, park.getNumOfEscapedDinosaurs());
+  }
 }
 

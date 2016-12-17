@@ -26,7 +26,7 @@ public class Park {
     return this.currentVisitors;
   }
 
-  public int getfunds() {
+  public int getFunds() {
     return this.funds;
   }
 
