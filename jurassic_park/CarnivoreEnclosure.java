@@ -18,4 +18,8 @@ public class CarnivoreEnclosure extends Enclosure {
     dinosaurs.add(carnivore);
   }
 
+  public void removeDinosaur(Carnivore carnivore) {
+    dinosaurs.remove(carnivore);
+  }
+
 }

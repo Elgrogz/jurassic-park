@@ -18,4 +18,8 @@ public class Aquarium extends Enclosure {
     dinosaurs.add(swimmer);
   }
 
+  public void deleteDinosaur(Swimmable swimmer) {  
+    dinosaurs.remove(swimmer);
+  }
+
 }

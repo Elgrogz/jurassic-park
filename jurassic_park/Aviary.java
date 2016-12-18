@@ -18,4 +18,8 @@ public class Aviary extends Enclosure {
     dinosaurs.add(flyer);
   }
 
+  public void removeDinosaur(Flyable flyer) {  
+    dinosaurs.remove(flyer);
+  }
+
 }

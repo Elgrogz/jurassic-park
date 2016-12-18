@@ -68,4 +68,10 @@ public class EnclosureTest {
     assertEquals(1, aviary.getSize()); 
   }      
 
+  @Test
+  public void canRemoveFlyer() {
+    aviary.addDinosaur(pterodactyl);
+    aviary.removeDinosaur(pterodactyl);
+    assertEquals(0, aviary.getSize()); 
+  } 
 }
