@@ -4,6 +4,7 @@ import java.util.*;
 public class Park {
 
   String name;
+  ArrayList<Dinosaur> allDinosaurs;
   ArrayList<Dinosaur> escapedDinosaurs;
   ArrayList<Enclosure> enclosures;
   int currentVisitors;
@@ -12,6 +13,7 @@ public class Park {
 
   public Park(String name) {
     this.name = name;
+    this.allDinosaurs = new ArrayList<Dinosaur>();
     this.enclosures = new ArrayList<Enclosure>();
     this.escapedDinosaurs = new ArrayList<Dinosaur>();
     this.currentVisitors = 0;
@@ -62,6 +64,10 @@ public class Park {
 
   public void addEscapedDinosaur(Dinosaur dinosaur) {  
     escapedDinosaurs.add(dinosaur);
+  }
+
+  public void removeEscapedDinosaur(Dinosaur dinosaur) {  
+    escapedDinosaurs.remove(dinosaur);
   }
 
 }

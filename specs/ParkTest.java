@@ -49,6 +49,13 @@ public class ParkTest {
   }
 
   @Test
+  public void canRemoveEscapedDinosaurs() {
+    park.addEscapedDinosaur(trex);
+    park.removeEscapedDinosaur(trex);
+    assertEquals(0, park.getNumOfEscapedDinosaurs());
+  }
+
+  @Test
   public void canAddEnclosure() {
     park.addEnclosure(carnivoreEnclosure);
     park.addEnclosure(herbivoreEnclosure);
