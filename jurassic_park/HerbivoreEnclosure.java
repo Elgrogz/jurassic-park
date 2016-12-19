@@ -22,5 +22,14 @@ public class HerbivoreEnclosure extends Enclosure {
     dinosaurs.remove(herbivore);
   }
 
+  public void getEnclosurePopularity() {
+    int result = 0;
+    for (Herbivore dinosaur : dinosaurs) {
+      result += dinosaur.getPopularityLevel();
+    }
+    this.enclosurePopularity = result;
+  }
+
+
 }
 

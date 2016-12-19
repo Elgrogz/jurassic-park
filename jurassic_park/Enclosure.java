@@ -5,6 +5,7 @@ public abstract class Enclosure {
 
   String name;
   Boolean damaged;
+  int enclosurePopularity;
 
   public Enclosure(String name) {
     this.name = name;
@@ -26,4 +27,5 @@ public abstract class Enclosure {
   public void damage() {
     this.damaged = true;
   }
+
 }

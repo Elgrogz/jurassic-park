@@ -22,4 +22,13 @@ public class Aviary extends Enclosure {
     dinosaurs.remove(flyer);
   }
 
+  public void getEnclosurePopularity() {
+    int result = 0;
+    for (Flyable dinosaur : dinosaurs) {
+      result += dinosaur.getPopularityLevel();
+    }
+    this.enclosurePopularity = result;
+  }
+
+
 }

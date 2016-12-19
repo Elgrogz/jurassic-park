@@ -74,4 +74,10 @@ public class EnclosureTest {
     aviary.removeDinosaur(pterodactyl);
     assertEquals(0, aviary.getSize()); 
   } 
+
+  @Test
+  public void canGetPopularity() {
+    carnivoreEnclosure.addDinosaur(trex);
+    carnivoreEnclosure.addDinosaur(veloceraptor);
+  }
 }

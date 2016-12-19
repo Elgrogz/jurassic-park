@@ -22,4 +22,13 @@ public class Aquarium extends Enclosure {
     dinosaurs.remove(swimmer);
   }
 
+  public void getEnclosurePopularity() {
+    int result = 0;
+    for (Swimmable dinosaur : dinosaurs) {
+      result += dinosaur.getPopularityLevel();
+    }
+    this.enclosurePopularity = result;
+  }
+
+
 }

@@ -7,6 +7,7 @@ public class Park {
   ArrayList<Dinosaur> allDinosaurs;
   ArrayList<Dinosaur> escapedDinosaurs;
   ArrayList<Enclosure> enclosures;
+  int totalPopularityLevel;
   int currentVisitors;
   int funds;
 
@@ -16,6 +17,7 @@ public class Park {
     this.allDinosaurs = new ArrayList<Dinosaur>();
     this.enclosures = new ArrayList<Enclosure>();
     this.escapedDinosaurs = new ArrayList<Dinosaur>();
+    this.totalPopularityLevel = 0;
     this.currentVisitors = 0;
     this.funds = 0;
   }
