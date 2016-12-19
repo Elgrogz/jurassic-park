@@ -14,12 +14,12 @@ public class ParkTest {
 
   @Before
   public void before() {
+    park = new Park("Jurassic Park");
+    carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
+    herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
     trex = new Trex("Jeff");
     stegosaurus = new Stegosaurus("Winston");
     tricerotops = new Tricerotops("Samuel");
-    carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
-    herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
-    park = new Park("Jurassic Park");
   }
 
   @Test
@@ -65,9 +65,22 @@ public class ParkTest {
 
   @Test
   public void canAddDinosaurToEnclosure() {
-    carnivoreEnclosure.addDinosaur(trex);
     park.addEnclosure(carnivoreEnclosure);
+    carnivoreEnclosure.addDinosaur(trex);
     assertEquals("T-rex cage", park.getEnclosureName(carnivoreEnclosure));
+    assertEquals(1, carnivoreEnclosure.getSize());
+  }
+
+  @Test
+  public void dinosaurCanRampage() {
+    park.addEnclosure(carnivoreEnclosure);
+    carnivoreEnclosure.addDinosaur(trex);
+    trex.takeACrap();
+    trex.takeACrap();
+    trex.takeACrap();
+    trex.takeACrap();
+    trex.takeACrap();
+    
   }
 }
 

@@ -43,6 +43,7 @@ public abstract class Dinosaur {
 
   public void takeACrap() {
     this.foodLevel -= 1; 
+    checkFood();
   }
 
   public void checkFood() {
@@ -56,7 +57,7 @@ public abstract class Dinosaur {
   }
 
   public void rampage() {
-
+    System.out.println(getName() + " has broken free and rampaged!");
   } 
 
   public String info() {
