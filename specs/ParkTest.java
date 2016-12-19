@@ -90,7 +90,7 @@ public class ParkTest {
     park.addEnclosure(carnivoreEnclosure);
     carnivoreEnclosure.addDinosaur(trex);
     park.setParkPopularityLevel();
-    park.calculateVisitors();
+    park.calculateVisitorsAndFunds();
     assertEquals(500, park.getVisitorNumbers());
     trex.takeACrap();
     trex.takeACrap();
@@ -100,7 +100,7 @@ public class ParkTest {
     assertEquals(500, park.getVisitorNumbers());
     trex.takeACrap();
     park.rampageCheck();
-    park.calculateVisitors();
+    park.calculateVisitorsAndFunds();
     assertEquals(0, park.getVisitorNumbers());
   }
 
@@ -131,8 +131,26 @@ public class ParkTest {
     aviary.addDinosaur(pterodactyl);
     aquarium.addDinosaur(mosasaurus);
     park.setParkPopularityLevel();
-    park.calculateVisitors();
+    park.calculateVisitorsAndFunds();
     assertEquals(2000, park.getVisitorNumbers());
+  }
+
+  @Test
+  public void canUpdateFunds() {
+    park.addEnclosure(carnivoreEnclosure);
+    park.addEnclosure(herbivoreEnclosure);
+    park.addEnclosure(aquarium);
+    park.addEnclosure(aviary);
+    carnivoreEnclosure.addDinosaur(trex);
+    carnivoreEnclosure.addDinosaur(veloceraptor);
+    herbivoreEnclosure.addDinosaur(tricerotops);
+    aviary.addDinosaur(pterodactyl);
+    aquarium.addDinosaur(mosasaurus);
+    assertEquals(0, park.getFunds());
+    park.setParkPopularityLevel();
+    park.calculateVisitorsAndFunds();
+    assertEquals(2000, park.getVisitorNumbers());
+    assertEquals(20000, park.getFunds());
   }
 
 

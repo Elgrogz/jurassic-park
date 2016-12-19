@@ -48,6 +48,10 @@ public class Park {
     this.currentVisitors = currentVisitors;
   }
 
+  public void setFunds(int funds) {
+    this.funds = funds;
+  }
+
   public void addEnclosure(Enclosure enclosure) {
     enclosures.add(enclosure);
   }
@@ -74,9 +78,10 @@ public class Park {
     this.parkPopularityLevel = result;
   }
 
-  public void calculateVisitors() {
+  public void calculateVisitorsAndFunds() {
     if (escapedDinosaurs.isEmpty()) {
       setCurrentVisitors(this.getParkPopularityLevel() * 100);
+      setFunds(getFunds() + (getVisitorNumbers() * 10));
     }
     else {
       setCurrentVisitors(0);
