@@ -9,17 +9,31 @@ public class ParkTest {
   Trex trex;
   Stegosaurus stegosaurus;
   Tricerotops tricerotops;
+  Veloceraptor veloceraptor;
+  Pterodactyl pterodactyl;
+  Pantydraco pantydraco;
+  Saltopus saltopus;
+  Mosasaurus mosasaurus;
   CarnivoreEnclosure carnivoreEnclosure;
   HerbivoreEnclosure herbivoreEnclosure;
+  Aquarium aquarium;
+  Aviary aviary;
 
   @Before
   public void before() {
     park = new Park("Jurassic Park");
     carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
     herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
+    aquarium = new Aquarium("Aquarium");
+    aviary = new Aviary("Aviary");
     trex = new Trex("Jeff");
     stegosaurus = new Stegosaurus("Winston");
     tricerotops = new Tricerotops("Samuel");
+    veloceraptor = new Veloceraptor("Gordon");
+    pterodactyl = new Pterodactyl("Wendy");
+    pantydraco = new Pantydraco("Susan");
+    saltopus = new Saltopus("Mary");
+    mosasaurus = new Mosasaurus("Oliver");
   }
 
   @Test
@@ -80,7 +94,22 @@ public class ParkTest {
     trex.takeACrap();
     trex.takeACrap();
     trex.takeACrap();
-    
   }
+
+  @Test
+  public void canGetParkPopularity() {
+    park.addEnclosure(carnivoreEnclosure);
+    park.addEnclosure(herbivoreEnclosure);
+    park.addEnclosure(aquarium);
+    park.addEnclosure(aviary);
+    carnivoreEnclosure.addDinosaur(trex);
+    carnivoreEnclosure.addDinosaur(veloceraptor);
+    herbivoreEnclosure.addDinosaur(tricerotops);
+    aviary.addDinosaur(pterodactyl);
+    aquarium.addDinosaur(mosasaurus);
+    park.setParkPopularityLevel();
+    assertEquals(20, park.getParkPopularityLevel());
+  }
+
 }
 
