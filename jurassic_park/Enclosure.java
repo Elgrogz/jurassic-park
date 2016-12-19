@@ -27,6 +27,14 @@ public abstract class Enclosure {
     this.damaged = true;
   }
 
+  public ArrayList<Dinosaur> returnDinosaurs() {
+    ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
+    for (Dinosaur dinosaur : dinosaurs) {
+      dinos.add(dinosaur);
+    }
+    return dinos;
+  }
+
   public abstract int getEnclosurePopularity();
 
 }

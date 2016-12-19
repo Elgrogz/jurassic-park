@@ -46,19 +46,22 @@ public abstract class Dinosaur {
     checkFood();
   }
 
-  public void checkFood() {
+  public String checkFood() {
     if (this.foodLevel > 5) {
       this.foodLevel = 5;
+      return "Not starving";
     }
     else if (this.foodLevel < 1) {
       this.foodLevel = 0;
-      rampage();
+      return "Dinosaur starving";
+      // rampage();
     }
+    return null;
   }
 
-  public void rampage() {
-    System.out.println(getName() + " has broken free and rampaged!");
-  } 
+  // public void rampage() {
+  //   System.out.println(getName() + " has broken free and rampaged!");
+  // } 
 
   public String info() {
     return "Name: " + getName() + ", Current Food Level: " + getFoodLevel();

@@ -4,7 +4,6 @@ import java.util.*;
 public class Park {
 
   String name;
-  // ArrayList<Dinosaur> allDinosaurs;
   ArrayList<Dinosaur> escapedDinosaurs;
   ArrayList<Enclosure> enclosures;
   int parkPopularityLevel;
@@ -14,7 +13,6 @@ public class Park {
 
   public Park(String name) {
     this.name = name;
-    // this.allDinosaurs = new ArrayList<Dinosaur>();
     this.enclosures = new ArrayList<Enclosure>();
     this.escapedDinosaurs = new ArrayList<Dinosaur>();
     this.parkPopularityLevel = 0;
@@ -77,7 +75,7 @@ public class Park {
   }
 
   public void calculateVisitors() {
-    if (getNumOfEscapedDinosaurs() == 0) {
+    if (escapedDinosaurs.isEmpty()) {
       setCurrentVisitors(this.getParkPopularityLevel() * 100);
     }
     else {
@@ -92,5 +90,16 @@ public class Park {
   public void removeEscapedDinosaur(Dinosaur dinosaur) {  
     escapedDinosaurs.remove(dinosaur);
   }
+
+  // public void rampageCheck() {
+  //   for (Enclosure enclosure : enclosures) {
+  //     for (Dinosaur dinosaur : dinosaurs) {
+  //       if (dinosaur.checkFood() == "Dinosaur starving") {
+  //         dinosaurs.removeDinosaur(dinosaur);
+  //         addEscapedDinosaur(dinosaur);
+  //       }
+  //     }
+  //   }
+  // }
 
 }

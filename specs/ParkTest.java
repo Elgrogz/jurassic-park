@@ -89,11 +89,16 @@ public class ParkTest {
   public void dinosaurCanRampage() {
     park.addEnclosure(carnivoreEnclosure);
     carnivoreEnclosure.addDinosaur(trex);
+    park.setParkPopularityLevel();
+    park.calculateVisitors();
+    assertEquals(500, park.getVisitorNumbers());
     trex.takeACrap();
     trex.takeACrap();
     trex.takeACrap();
     trex.takeACrap();
     trex.takeACrap();
+    park.calculateVisitors();
+    assertEquals(0, park.getVisitorNumbers());
   }
 
   @Test
