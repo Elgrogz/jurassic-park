@@ -5,7 +5,12 @@ public class Runner {
 
   public static void main(String[] args) {
 
-    Park park = new Park("Jurassic Park");
+    System.out.println("Welcome to Gregors incredible Jurassic Park Simulator. What would you like to call your park?");
+    String name = System.console().readLine();
+
+    Park park = new Park(name);
+    System.out.println("Your zoo is called " + park.getName());
+    
     CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
     park.addEnclosure(carnivoreEnclosure);
     HerbivoreEnclosure herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
