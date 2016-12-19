@@ -54,6 +54,7 @@ public class EnclosureTest {
   public void canAddHerbivore() {
     herbivoreEnclosure.addDinosaur(tricerotops);
     assertEquals(1, herbivoreEnclosure.getSize()); 
+    assertEquals(3, herbivoreEnclosure.getEnclosurePopularity());
   }
 
   @Test
@@ -79,5 +80,6 @@ public class EnclosureTest {
   public void canGetPopularity() {
     carnivoreEnclosure.addDinosaur(trex);
     carnivoreEnclosure.addDinosaur(veloceraptor);
+    assertEquals(9, carnivoreEnclosure.getEnclosurePopularity());
   }
 }

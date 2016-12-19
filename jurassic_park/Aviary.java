@@ -4,9 +4,11 @@ import java.util.*;
 public class Aviary extends Enclosure {
 
   ArrayList<Flyable> dinosaurs;
+  int enclosurePopularity;
 
   public Aviary(String name) {
     super(name);
+    this.enclosurePopularity = 0;
     this.dinosaurs = new ArrayList<Flyable>();
   }
 
@@ -22,7 +24,12 @@ public class Aviary extends Enclosure {
     dinosaurs.remove(flyer);
   }
 
-  public void getEnclosurePopularity() {
+  public int getEnclosurePopularity() {
+    setEnclosurePopularity();
+    return this.enclosurePopularity;
+  }
+
+  public void setEnclosurePopularity() {
     int result = 0;
     for (Flyable dinosaur : dinosaurs) {
       result += dinosaur.getPopularityLevel();

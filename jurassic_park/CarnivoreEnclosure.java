@@ -24,7 +24,12 @@ public class CarnivoreEnclosure extends Enclosure {
     dinosaurs.remove(carnivore);
   }
 
-  public void getEnclosurePopularity() {
+  public int getEnclosurePopularity() {
+    setEnclosurePopularity();
+    return this.enclosurePopularity;
+  }
+
+  public void setEnclosurePopularity() {
     int result = 0;
     for (Carnivore dinosaur : dinosaurs) {
       result += dinosaur.getPopularityLevel();
