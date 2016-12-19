@@ -32,4 +32,14 @@ public class Aquarium extends Enclosure {
   }
 
 
+  public ArrayList<Dinosaur> returnDinosaurs() {
+    ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
+    for (Swimmable swimmable : dinosaurs) {
+      Dinosaur dinosaur = (Dinosaur)swimmable;
+      dinos.add(dinosaur);
+    }
+    return dinos;
+  }
+
+
 }

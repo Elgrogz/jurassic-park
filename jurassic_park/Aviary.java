@@ -30,5 +30,13 @@ public class Aviary extends Enclosure {
     return result;
   }
 
+  public ArrayList<Dinosaur> returnDinosaurs() {
+    ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
+    for (Flyable flyer : dinosaurs) {
+      Dinosaur dinosaur = (Dinosaur)flyer;
+      dinos.add(dinosaur);
+    }
+    return dinos;
+  }
 
 }

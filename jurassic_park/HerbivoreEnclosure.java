@@ -30,6 +30,14 @@ public class HerbivoreEnclosure extends Enclosure {
     return result;
   }
 
+  public ArrayList<Dinosaur> returnDinosaurs() {
+    ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
+    for (Herbivore herbivore : dinosaurs) {
+      Dinosaur dinosaur = (Dinosaur)herbivore;
+      dinos.add(dinosaur);
+    }
+    return dinos;
+  }
 
 }
 

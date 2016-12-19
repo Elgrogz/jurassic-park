@@ -91,15 +91,15 @@ public class Park {
     escapedDinosaurs.remove(dinosaur);
   }
 
-  // public void rampageCheck() {
-  //   for (Enclosure enclosure : enclosures) {
-  //     for (Dinosaur dinosaur : dinosaurs) {
-  //       if (dinosaur.checkFood() == "Dinosaur starving") {
-  //         dinosaurs.removeDinosaur(dinosaur);
-  //         addEscapedDinosaur(dinosaur);
-  //       }
-  //     }
-  //   }
-  // }
+  public void rampageCheck() {
+    for (Enclosure enclosure : enclosures) {
+      ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+      for (Dinosaur dinosaur : dinosaurs) {
+        if (dinosaur.checkFood() == "Dinosaur starving") {
+          addEscapedDinosaur(dinosaur);
+        }
+      }
+    }
+  }
 
 }

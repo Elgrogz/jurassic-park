@@ -30,4 +30,13 @@ public class CarnivoreEnclosure extends Enclosure {
     return result;
   }
 
+  public ArrayList<Dinosaur> returnDinosaurs() {
+    ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
+    for (Carnivore carnivore : dinosaurs) {
+      Dinosaur dinosaur = (Dinosaur)carnivore;
+      dinos.add(dinosaur);
+    }
+    return dinos;
+  }
+
 }

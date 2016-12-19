@@ -96,7 +96,10 @@ public class ParkTest {
     trex.takeACrap();
     trex.takeACrap();
     trex.takeACrap();
+    park.rampageCheck();
+    assertEquals(500, park.getVisitorNumbers());
     trex.takeACrap();
+    park.rampageCheck();
     park.calculateVisitors();
     assertEquals(0, park.getVisitorNumbers());
   }
