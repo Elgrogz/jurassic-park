@@ -111,5 +111,22 @@ public class ParkTest {
     assertEquals(20, park.getParkPopularityLevel());
   }
 
+  @Test
+  public void canGetCurrentVisitors() {
+    park.addEnclosure(carnivoreEnclosure);
+    park.addEnclosure(herbivoreEnclosure);
+    park.addEnclosure(aquarium);
+    park.addEnclosure(aviary);
+    carnivoreEnclosure.addDinosaur(trex);
+    carnivoreEnclosure.addDinosaur(veloceraptor);
+    herbivoreEnclosure.addDinosaur(tricerotops);
+    aviary.addDinosaur(pterodactyl);
+    aquarium.addDinosaur(mosasaurus);
+    park.setParkPopularityLevel();
+    park.calculateVisitors();
+    assertEquals(2000, park.getVisitorNumbers());
+  }
+
+
 }
 

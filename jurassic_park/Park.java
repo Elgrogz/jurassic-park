@@ -76,6 +76,15 @@ public class Park {
     this.parkPopularityLevel = result;
   }
 
+  public void calculateVisitors() {
+    if (getNumOfEscapedDinosaurs() == 0) {
+      setCurrentVisitors(this.getParkPopularityLevel() * 100);
+    }
+    else {
+      setCurrentVisitors(0);
+    }
+  }
+
   public void addEscapedDinosaur(Dinosaur dinosaur) {  
     escapedDinosaurs.add(dinosaur);
   }
