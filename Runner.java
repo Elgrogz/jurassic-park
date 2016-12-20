@@ -41,7 +41,7 @@ public class Runner {
 
     ZooApp app = new ZooApp(park);
 
-    // app.play();
+    app.play();
 
   }
 }

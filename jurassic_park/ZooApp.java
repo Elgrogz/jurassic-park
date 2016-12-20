@@ -26,14 +26,27 @@ public class ZooApp {
     System.out.println("View Dinosaurs (d)");
     System.out.println("View Funds (f)");
     System.out.println("View Visitor Numbers (v)");
-    System.out.println("Buy Dinosaur (e)");
+    System.out.println("Buy Dinosaur (b)");
+    System.out.println("Next Turn (n)");
     System.out.println("What would you like to do?");
+  
     String choice = System.console().readLine();
 
       switch (choice) {
-        case 
+        case "e":
+          System.out.println("View Enclosures (e)");
+        case "d":
+          System.out.println("View Dinosaurs (d)");
+        case "f":
+          System.out.println("View Funds (f)");
+        case "v":
+          System.out.println("View Visitor Numbers (v)");
+        case "b":
+          System.out.println("Buy Dinosaur (b)");
+        case "n":
+          System.out.println("Next Turn (n)");
       }
-
+      return choice;
   }
 
 
@@ -53,6 +66,8 @@ public class ZooApp {
   // }
 
 
-  // public void play() {
-  //   index();
-  // }
+  public void play() {
+    index();
+  }
+
+}
