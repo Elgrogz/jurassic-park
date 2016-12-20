@@ -27,7 +27,12 @@ public abstract class Enclosure {
     this.damaged = true;
   }
 
+  public String status() {
+    return "\nEnclosure Name: " + getName() + "\nNumber of Dinosaurs: " + getSize() + "\n" + returnDinosaurs() + "\n--------------------";
+  }
+
   public abstract int getEnclosurePopularity();
   public abstract ArrayList<Dinosaur> returnDinosaurs();
+  public abstract int getSize();
 
 }
