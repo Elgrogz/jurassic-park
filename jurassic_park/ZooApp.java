@@ -1,4 +1,5 @@
 package jurassic_park;
+import java.util.*;
 
 public class ZooApp {
 
@@ -25,7 +26,7 @@ public class ZooApp {
     System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
     System.out.println("\n-------Menu-------\n" );
     System.out.println("---View Enclosures (e)");
-    System.out.println("---View Dinosaurs (d)");
+    System.out.println("---Feed Dinosaur (f)");
     System.out.println("---Buy Dinosaur (b)");
     System.out.println("---Next Turn (n)");
     System.out.println("---Exit (x)");
@@ -35,7 +36,7 @@ public class ZooApp {
 
       switch (choice) {
         case "e":
-          park.getEnclosuresStatus();
+          getEnclosuresStatus();
           index();
         case "d":
           System.out.println("Feed Dinosaur (f)");
@@ -53,6 +54,17 @@ public class ZooApp {
       }
       return choice;
   }
+
+  public void getEnclosuresStatus() {
+    for (Enclosure enclosure : park.enclosures) {
+      System.out.println("\n---------------------");
+        System.out.println("Enclosure Name: " + enclosure.getName() + "\nNumber of Dinosaurs: " + enclosure.getSize() + "\n");
+        ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+        for (Dinosaur dinosaur : dinosaurs) {
+          System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel() + "\nType: " + dinosaur.getType() + "\n");
+        }
+      }
+    }
 
   public void nextTurn() {
     setNextDay();
