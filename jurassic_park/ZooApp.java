@@ -40,6 +40,7 @@ public class ZooApp {
           index();
         case "f":
           listAllDinosaurs();
+          feed();
           index();
         case "b":
           System.out.println("Buy Dinosaur (b)");
@@ -74,6 +75,22 @@ public class ZooApp {
       }
     }
   }
+
+  public void feed() {
+    System.out.println("Enter the name of the dinosaur you want to feed: ");
+    String dinosaurToFeed = System.console().readLine();
+    for (Enclosure enclosure : park.enclosures) {
+      ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+        for (Dinosaur dinosaur : dinosaurs) {
+          if (dinosaurToFeed == dinosaur.getName()) {
+            dinosaur.eat();
+            park.setFunds(-1000);
+          }
+        }
+      }
+  }
+
+
 
   public void nextTurn() {
     setNextDay();
