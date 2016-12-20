@@ -19,24 +19,33 @@ public class App {
   }
 
   public String index() {
-    System.out.println("")
-  }
 
-
-
-
-
-
-
-  public void nextTurn() {
-    //park.nextDay();
-    park.setPopularityLevel();
-    park.allDinosaursTakeACrap();
-    park.rampageCheck();
-    park.calculateVisitorsAndFunds();
     System.out.println("Day " + getDay());
-    //park.statusUpdate?
+    System.out.println("-------Menu-------\n" );
+    System.out.println("View Enclosures (e)");
+    System.out.println("View Dinosaurs (d)");
+    System.out.println("View Funds (f)");
+    System.out.println("View Visitor Numbers (v)");
+    System.out.println("Buy Dinosaur (e)");
+    System.out.println("What would you like to do?");
+
   }
+
+
+
+
+
+
+
+  // public void nextTurn() {
+  //   //park.nextDay();
+  //   park.setPopularityLevel();
+  //   park.allDinosaursTakeACrap();
+  //   park.rampageCheck();
+  //   park.calculateVisitorsAndFunds();
+  //   System.out.println("Day " + getDay());
+  //   //park.statusUpdate?
+  // }
 
 
   public void play() {
