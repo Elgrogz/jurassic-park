@@ -39,22 +39,4 @@ public class CarnivoreEnclosure extends Enclosure {
     return dinos;
   }
 
-  public void status() {
-    System.out.println("\nEnclosure Name: " + getName() + "\nNumber of Dinosaurs: " + getSize() + "\n");
-    
-    for (Carnivore carnivore : dinosaurs) {
-      Dinosaur dinosaur = (Dinosaur)carnivore;
-      System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel());
-    }
-    
-    System.out.println("\n---------------------");
-
-  }
- 
-
-  // @Override
-  // public String toString() {
-  //   return "Name: " + getName() + "\nFood Level: " + getFoodLevel();
-  // }
-
 }

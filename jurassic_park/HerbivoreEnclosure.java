@@ -38,16 +38,6 @@ public class HerbivoreEnclosure extends Enclosure {
     }
     return dinos;
   }
-  public void status() {
-    System.out.println("\nEnclosure Name: " + getName() + "\nNumber of Dinosaurs: " + getSize() + "\n");
-    
-    for (Herbivore herbivore: dinosaurs) {
-      Dinosaur dinosaur = (Dinosaur)herbivore;
-      System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel());
-    }
-    
-    System.out.println("\n---------------------");
-  }
-
+  
 }
 

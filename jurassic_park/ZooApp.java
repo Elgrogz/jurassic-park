@@ -36,6 +36,7 @@ public class ZooApp {
       switch (choice) {
         case "e":
           park.getEnclosuresStatus();
+          index();
         case "d":
           System.out.println("View Dinosaurs (d)");
         case "f":

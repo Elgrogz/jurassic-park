@@ -39,15 +39,4 @@ public class Aviary extends Enclosure {
     return dinos;
   }
 
-  public void status() {
-    System.out.println("\nEnclosure Name: " + getName() + "\nNumber of Dinosaurs: " + getSize() + "\n");
-    
-    for (Flyable flyer : dinosaurs) {
-      Dinosaur dinosaur = (Dinosaur)flyer;
-      System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel());
-    }
-    
-    System.out.println("\n---------------------");
-  }
-
 }

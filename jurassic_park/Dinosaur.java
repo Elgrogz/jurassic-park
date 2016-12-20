@@ -3,17 +3,24 @@ package jurassic_park;
 public abstract class Dinosaur {
 
   String name;
+  DinosaurTypes type;
   int foodLevel;
   int popularityLevel;
 
+
   public Dinosaur(String name) {
     this.name = name;
+    this.type = type;
     this.foodLevel = 5;
     this.popularityLevel = popularityLevel;
   }
 
   public String getName() {
     return this.name;
+  } 
+
+  public String getType() {
+    return this.type.toString();
   } 
 
   public int getFoodLevel() {
