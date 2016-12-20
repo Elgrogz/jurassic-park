@@ -1,11 +1,11 @@
-package jurrasic_park;
+package jurassic_park;
 
-public class App {
+public class ZooApp {
 
   Park park;
   int dayCounter;
 
-  public App(Park park) {
+  public ZooApp(Park park) {
     this.park = park;
     this.dayCounter = 1;
   }
@@ -28,6 +28,11 @@ public class App {
     System.out.println("View Visitor Numbers (v)");
     System.out.println("Buy Dinosaur (e)");
     System.out.println("What would you like to do?");
+    String choice = System.console().readLine();
+
+      switch (choice) {
+        case 
+      }
 
   }
 
@@ -48,8 +53,6 @@ public class App {
   // }
 
 
-  public void play() {
-    index();
-  }
-
-}
+  // public void play() {
+  //   index();
+  // }

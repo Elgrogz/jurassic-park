@@ -39,9 +39,9 @@ public class Runner {
     Mosasaurus mosasaurus = new Mosasaurus("Oliver");
     aquarium.addDinosaur(mosasaurus);
 
-    App app = new App(park);
+    ZooApp app = new ZooApp(park);
 
-    app.play();
+    // app.play();
 
   }
 }
