@@ -22,14 +22,14 @@ public class ZooApp {
 
     System.out.println("Day " + getDay());
     System.out.println("-------Menu-------\n" );
-    System.out.println("View Enclosures (e)");
-    System.out.println("View Dinosaurs (d)");
-    System.out.println("View Funds (f)");
-    System.out.println("View Visitor Numbers (v)");
-    System.out.println("Buy Dinosaur (b)");
-    System.out.println("Next Turn (n)");
-    System.out.println("Exit (x)");
-    System.out.println("What would you like to do?");
+    System.out.println("---View Enclosures (e)");
+    System.out.println("---View Dinosaurs (d)");
+    System.out.println("---View Funds (f)");
+    System.out.println("---View Visitor Numbers (v)");
+    System.out.println("---Buy Dinosaur (b)");
+    System.out.println("---Next Turn (n)");
+    System.out.println("---Exit (x)");
+    System.out.println("\nWhat would you like to do?");
   
     String choice = System.console().readLine();
 
