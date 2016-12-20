@@ -40,5 +40,16 @@ public class Aquarium extends Enclosure {
     return dinos;
   }
 
+  public void  status() {
+    System.out.println("\nEnclosure Name: " + getName() + "\nNumber of Dinosaurs: " + getSize() + "\n");
+    
+    for (Swimmable swimmer : dinosaurs) {
+      Dinosaur dinosaur = (Dinosaur)swimmer;
+      System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel());
+    }
+    
+    System.out.println("\n---------------------");
+  }
+
 
 }

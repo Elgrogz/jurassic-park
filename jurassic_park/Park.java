@@ -66,6 +66,19 @@ public class Park {
     return nameToReturn;
   }
 
+  public void getEnclosuresStatus() {
+    for (Enclosure enclosure : enclosures) {
+        System.out.println("\nEnclosure Name: " + enclosure.getName() + "\nNumber of Dinosaurs: " + enclosure.getSize() + "\n");
+        ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+        for (Dinosaur dinosaur : dinosaurs) {
+          System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel() + "\n");
+        }
+
+        System.out.println("\n---------------------");
+      }
+    }
+  
+
   public int getParkPopularityLevel() {
     return this.parkPopularityLevel; 
   }

@@ -18,12 +18,6 @@ public class ZooApp {
     this.dayCounter += 1;
   }
 
-  public void getEnclosures() {
-    for (Enclosure enclosure : park.enclosures) {
-      System.out.println(enclosure.status());
-    }
-
-  }
 
   public String index() {
 
@@ -41,7 +35,7 @@ public class ZooApp {
 
       switch (choice) {
         case "e":
-          getEnclosures();
+          park.getEnclosuresStatus();
         case "d":
           System.out.println("View Dinosaurs (d)");
         case "f":
