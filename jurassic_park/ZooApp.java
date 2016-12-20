@@ -38,18 +38,18 @@ public class ZooApp {
         case "e":
           getEnclosuresStatus();
           index();
-        case "d":
-          System.out.println("Feed Dinosaur (f)");
+        case "f":
+          listAllDinosaurs();
           index();
         case "b":
           System.out.println("Buy Dinosaur (b)");
           index();
         case "n":
-          System.out.println("Life always finds a way...");
+          System.out.println("\n Life always finds a way...");
           nextTurn();
           index();
         case "x":
-          System.out.println("Clever Girl!");
+          System.out.println("\nClever Girl!");
           break;
       }
       return choice;
@@ -66,13 +66,21 @@ public class ZooApp {
       }
     }
 
+  public void listAllDinosaurs() {
+    for (Enclosure enclosure : park.enclosures) {
+      ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+        for (Dinosaur dinosaur : dinosaurs) {
+          System.out.println("Name: " + dinosaur.getName() + "          Food Level: " + dinosaur.getFoodLevel() + "          Type: " + dinosaur.getType() + "\n");
+      }
+    }
+  }
+
   public void nextTurn() {
     setNextDay();
     park.setParkPopularityLevel();
     park.allDinosaursTakeADump();
     park.rampageCheck();
     park.calculateVisitorsAndFunds();
-    System.out.println("Day " + getDay());
   }
 
   public void play() {

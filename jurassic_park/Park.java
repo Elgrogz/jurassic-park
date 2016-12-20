@@ -102,6 +102,7 @@ public class Park {
       for (Dinosaur dinosaur : dinosaurs) {
         if (dinosaur.checkFood() == "Dinosaur starving") {
           addEscapedDinosaur(dinosaur);
+          System.out.println(dinosaur.getName() + " is starving and has gone on a rampage! He's eaten some of the guests and the park has been evacuated!");
         }
       }
     }
