@@ -1,15 +1,18 @@
 import jurassic_park.*;
 import java.util.*;
+import java.text.SimpleDateFormat;
 
 public class Runner {
 
   public static void main(String[] args) {
 
+    String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
+
     System.out.println("Welcome to Gregors incredible Jurassic Park Simulator. What would you like to call your park?");
     String name = System.console().readLine();
 
     Park park = new Park(name);
-    System.out.println("Your zoo is called " + park.getName());
+    System.out.println(park.getName() + " was founded on " + date + "!");
     
     CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
     park.addEnclosure(carnivoreEnclosure);
@@ -36,9 +39,9 @@ public class Runner {
     Mosasaurus mosasaurus = new Mosasaurus("Oliver");
     aquarium.addDinosaur(mosasaurus);
 
-    App app = new App(park);
+    // App app = new App(park);
 
-    app.play;
+    // app.play;
 
   }
 }

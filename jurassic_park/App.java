@@ -1,34 +1,35 @@
-package jurrasic_park;
+// package jurrasic_park;
 
-public class App {
+// public class App {
 
-  Park park;
+//   Park park;
 
-  public App(Park park) {
-    this.park = park;
-  }
+//   public App(Park park) {
+//     this.park = park;
+//   }
 
-  public String index() {
-
-  }
-
-
+//   public String index() {
+//     System.out.println("");
+//   }
 
 
 
 
 
-  public void nextTurn() {
-    park.setPopularityLevel;
-    park.allDinosaursTakeACrap;
-    park.rampageCheck;
-    park.calculateVisitorsAndFunds;
-    //park.status update?
-  }
 
 
-  public void play() {
-    index();
-  }
+//   public void nextTurn() {
+//     //park.dayCounter
+//     park.setPopularityLevel();
+//     park.allDinosaursTakeACrap();
+//     park.rampageCheck();
+//     park.calculateVisitorsAndFunds();
+//     //park.statusUpdate?
+//   }
 
-}
+
+//   public void play() {
+//     index();
+//   }
+
+// }
