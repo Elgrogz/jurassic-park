@@ -18,11 +18,17 @@ public class App {
 
 
 
-
+  public void nextTurn() {
+    park.setPopularityLevel;
+    park.allDinosaursTakeACrap;
+    park.rampageCheck;
+    park.calculateVisitorsAndFunds;
+    //park.status update?
+  }
 
 
   public void play() {
-    
+    index();
   }
 
 }

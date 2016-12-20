@@ -107,4 +107,13 @@ public class Park {
     }
   }
 
+  public void allDinosaursTakeADump() {
+  for (Enclosure enclosure : enclosures) {
+    ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+    for (Dinosaur dinosaur : dinosaurs) {
+      dinosaur.takeACrap();
+      }
+    }
+  }
+
 }
