@@ -2,9 +2,13 @@ package jurassic_park;
 
 public enum DinosaurTypes {
 
-    AQUATIC,
-    FLYING,
-    CARNIVORE,
-    HERBIVORE
+    TYRANNASAURUS,
+    TRICERATOPS,
+    VELOCERAPTOR,
+    STEGOSAURUS,
+    PANTYDRACO,
+    PTERODACTYL,
+    SALTOPUS,
+    MOSASAURUS
 
 }

@@ -12,9 +12,9 @@ public class Runner {
     String name = System.console().readLine();
 
     Park park = new Park(name);
-    System.out.println("\n" + park.getName() + " was founded on " + date + "!");
+    System.out.println("\n" + park.getName() + " was founded on " + date + "! \nThe park is a huge success on its opening day! What could possibly go wrong?");
     
-    CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
+    CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("Carnivore cage");
     park.addEnclosure(carnivoreEnclosure);
     HerbivoreEnclosure herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
     park.addEnclosure(herbivoreEnclosure);

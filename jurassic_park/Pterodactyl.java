@@ -4,7 +4,7 @@ public class Pterodactyl extends Dinosaur implements Flyable {
 
   public Pterodactyl(String name){
     super(name);
-    this.type = DinosaurTypes.FLYING;
+    this.type = DinosaurTypes.PTERODACTYL;
     this.popularityLevel = 4;
   } 
 

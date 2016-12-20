@@ -4,7 +4,7 @@ public class Stegosaurus extends Dinosaur implements Herbivore {
 
   public Stegosaurus(String name) {
     super(name);
-    this.type = DinosaurTypes.HERBIVORE;
+    this.type = DinosaurTypes.STEGOSAURUS;
     this.popularityLevel = 3;
   } 
 }

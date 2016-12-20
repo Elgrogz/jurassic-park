@@ -68,12 +68,12 @@ public class Park {
 
   public void getEnclosuresStatus() {
     for (Enclosure enclosure : enclosures) {
+      System.out.println("\n---------------------");
         System.out.println("Enclosure Name: " + enclosure.getName() + "\nNumber of Dinosaurs: " + enclosure.getSize() + "\n");
         ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
         for (Dinosaur dinosaur : dinosaurs) {
           System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel() + "\nType: " + dinosaur.getType() + "\n");
         }
-        System.out.println("\n---------------------");
       }
     }
   
