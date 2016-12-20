@@ -31,7 +31,6 @@ public class Aquarium extends Enclosure {
     return result;
   }
 
-
   public ArrayList<Dinosaur> returnDinosaurs() {
     ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
     for (Swimmable swimmable : dinosaurs) {
