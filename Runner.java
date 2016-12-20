@@ -8,11 +8,11 @@ public class Runner {
 
     String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
 
-    System.out.println("Welcome to Gregors incredible Jurassic Park Simulator. What would you like to call your park?");
+    System.out.println("\nWelcome to Gregors incredible Jurassic Park Simulator. What would you like to call your park?");
     String name = System.console().readLine();
 
     Park park = new Park(name);
-    System.out.println(park.getName() + " was founded on " + date + "!");
+    System.out.println("\n" + park.getName() + " was founded on " + date + "!");
     
     CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("T-rex cage");
     park.addEnclosure(carnivoreEnclosure);

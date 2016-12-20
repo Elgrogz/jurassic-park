@@ -20,12 +20,12 @@ public class ZooApp {
 
   public String index() {
 
-    System.out.println("Day " + getDay());
-    System.out.println("-------Menu-------\n" );
+    System.out.println("\n-------Day " + getDay() + "-------");
+    System.out.println("\nCurrent funds: £" + park.getFunds());
+    System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
+    System.out.println("\n-------Menu-------\n" );
     System.out.println("---View Enclosures (e)");
     System.out.println("---View Dinosaurs (d)");
-    System.out.println("---View Funds (f)");
-    System.out.println("---View Visitor Numbers (v)");
     System.out.println("---Buy Dinosaur (b)");
     System.out.println("---Next Turn (n)");
     System.out.println("---Exit (x)");
@@ -38,15 +38,7 @@ public class ZooApp {
           park.getEnclosuresStatus();
           index();
         case "d":
-          System.out.println("View Dinosaurs (d)");
-          index();
-        case "f":
-          System.out.println("------------------");
-          System.out.println("Current funds: £" + park.getFunds());
-          index();
-        case "v":
-          System.out.println("------------------");
-          System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
+          System.out.println("Feed Dinosaur (f)");
           index();
         case "b":
           System.out.println("Buy Dinosaur (b)");
