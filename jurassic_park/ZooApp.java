@@ -14,10 +14,9 @@ public class ZooApp {
     return this.dayCounter;
   }
 
-  public void nextDay() {
+  public void setNextDay() {
     this.dayCounter += 1;
   }
-
 
   public String index() {
 
@@ -29,6 +28,7 @@ public class ZooApp {
     System.out.println("View Visitor Numbers (v)");
     System.out.println("Buy Dinosaur (b)");
     System.out.println("Next Turn (n)");
+    System.out.println("Exit (x)");
     System.out.println("What would you like to do?");
   
     String choice = System.console().readLine();
@@ -39,36 +39,41 @@ public class ZooApp {
           index();
         case "d":
           System.out.println("View Dinosaurs (d)");
+          index();
         case "f":
-          System.out.println("View Funds (f)");
+          System.out.println("------------------");
+          System.out.println("Current funds: £" + park.getFunds());
+          index();
         case "v":
-          System.out.println("View Visitor Numbers (v)");
+          System.out.println("------------------");
+          System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
+          index();
         case "b":
           System.out.println("Buy Dinosaur (b)");
+          index();
         case "n":
-          System.out.println("Next Turn (n)");
+          System.out.println("Life always finds a way...");
+          nextTurn();
+          index();
+        case "x":
+          System.out.println("Clever Girl!");
+          break;
       }
       return choice;
   }
 
-
-
-
-
-
-
-  // public void nextTurn() {
-  //   //park.nextDay();
-  //   park.setPopularityLevel();
-  //   park.allDinosaursTakeACrap();
-  //   park.rampageCheck();
-  //   park.calculateVisitorsAndFunds();
-  //   System.out.println("Day " + getDay());
-  //   //park.statusUpdate?
-  // }
-
+  public void nextTurn() {
+    setNextDay();
+    park.setParkPopularityLevel();
+    park.allDinosaursTakeADump();
+    park.rampageCheck();
+    park.calculateVisitorsAndFunds();
+    System.out.println("Day " + getDay());
+  }
 
   public void play() {
+    park.setParkPopularityLevel();
+    park.calculateVisitorsAndFunds();
     index();
   }
 
