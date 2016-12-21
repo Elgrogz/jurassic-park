@@ -44,6 +44,10 @@ public class ZooApp {
         case "b":
           buyMenu();
           index();
+        case "r":
+          listAllDinosaurs();
+          remove();
+          index();
         case "n":
           System.out.println("\n Life always finds a way...");
           nextTurn();
@@ -86,6 +90,19 @@ public class ZooApp {
             park.setFunds(park.getFunds() - 1000);
           }
         }
+      }
+  }
+
+  public void remove() {
+    System.out.println("Enter the name of the dinosaur you want to remove: ");
+    String dinosaurToDelete = System.console().readLine();
+      for (Enclosure enclosure : park.enclosures) {
+        ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+          for (Dinosaur dinosaur : dinosaurs) {
+            if (dinosaurToDelete.equals(dinosaur.getName())) {
+              enclosure.removeDinosaur(dinosaur);
+            }
+          }
       }
   }
 
