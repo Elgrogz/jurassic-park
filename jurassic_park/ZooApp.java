@@ -28,7 +28,7 @@ public class ZooApp {
     System.out.println("\n-------Day " + getDay() + "-------");
     System.out.println("\nCurrent funds: £" + park.getFunds());
     System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
-    System.out.println("\n-------Menu-------\n" );
+    System.out.println("\n----------Menu----------\n" );
     System.out.println("---View Enclosures (e)");
     System.out.println("---Feed Dinosaur (f)");
     System.out.println("---Buy Dinosaur (b)");
@@ -121,7 +121,6 @@ public class ZooApp {
     System.out.println("Veloceraptor (v)");
     String choice = System.console().readLine();
 
-
       switch (choice) {
         case "m":
           Mosasaurus mosasaurus = new Mosasaurus(name);
@@ -174,6 +173,7 @@ public class ZooApp {
         if (dinosaur.checkFood() == ("Dinosaur starving")) {
           park.addEscapedDinosaur(dinosaur);
           park.setFunds(park.getFunds() - 5000);
+          dinosaur.setFoodLevel(5);
           System.out.println(dinosaur.getName() + " is starving and has gone on a rampage! He's eaten some of the guests and the park has been evacuated!");
         }
       }
