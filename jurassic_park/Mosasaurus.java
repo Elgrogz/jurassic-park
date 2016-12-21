@@ -7,8 +7,4 @@ public class Mosasaurus extends Dinosaur implements Swimmable {
     this.type = DinosaurTypes.MOSASAURUS;
     this.popularityLevel = 4;
   } 
-
-  public void swim() {
-    
-  }
 }

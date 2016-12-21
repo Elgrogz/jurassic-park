@@ -7,8 +7,4 @@ public class Pterodactyl extends Dinosaur implements Flyable {
     this.type = DinosaurTypes.PTERODACTYL;
     this.popularityLevel = 4;
   } 
-
-  public void fly() {
-
-  }
 }

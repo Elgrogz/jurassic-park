@@ -85,24 +85,26 @@ public class ParkTest {
     assertEquals(1, carnivoreEnclosure.getSize());
   }
 
-  @Test
-  public void dinosaurCanRampage() {
-    park.addEnclosure(carnivoreEnclosure);
-    carnivoreEnclosure.addDinosaur(trex);
-    park.setParkPopularityLevel();
-    park.calculateVisitorsAndFunds();
-    assertEquals(500, park.getVisitorNumbers());
-    trex.takeACrap();
-    trex.takeACrap();
-    trex.takeACrap();
-    trex.takeACrap();
-    park.rampageCheck();
-    assertEquals(500, park.getVisitorNumbers());
-    trex.takeACrap();
-    park.rampageCheck();
-    park.calculateVisitorsAndFunds();
-    assertEquals(0, park.getVisitorNumbers());
-  }
+//test passed by rampage has been moved to ZooApp since.
+
+  // @Test
+  // public void dinosaurCanRampage() {
+  //   park.addEnclosure(carnivoreEnclosure);
+  //   carnivoreEnclosure.addDinosaur(trex);
+  //   park.setParkPopularityLevel();
+  //   park.calculateVisitorsAndFunds();
+  //   assertEquals(500, park.getVisitorNumbers());
+  //   trex.takeACrap();
+  //   trex.takeACrap();
+  //   trex.takeACrap();
+  //   trex.takeACrap();
+  //   park.rampageCheck();
+  //   assertEquals(500, park.getVisitorNumbers());
+  //   trex.takeACrap();
+  //   park.rampageCheck();
+  //   park.calculateVisitorsAndFunds();
+  //   assertEquals(0, park.getVisitorNumbers());
+  // }
 
   @Test
   public void canGetParkPopularity() {

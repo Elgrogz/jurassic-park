@@ -37,7 +37,6 @@ public abstract class Dinosaur {
 
   public void setFoodLevel(int foodLevel) {
     this.foodLevel = foodLevel;
-    checkFood();
   }
 
   public void setPopularityLevel(int popularityLevel) {
@@ -61,14 +60,9 @@ public abstract class Dinosaur {
     else if (this.foodLevel < 1) {
       this.foodLevel = 0;
       return "Dinosaur starving";
-      // rampage();
     }
     return null;
   }
-
-  // public void rampage() {
-  //   System.out.println(getName() + " has broken free and rampaged!");
-  // } 
 
   public String info() {
     return "Name: " + getName() + ", Current Food Level: " + getFoodLevel();

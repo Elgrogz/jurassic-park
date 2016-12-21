@@ -90,13 +90,78 @@ public class ZooApp {
       }
   }
 
+  public void buyMenu() {
+    System.out.println("Enter the name of your new dinosaur: ");
+    String name = System.console().readLine();
 
+    System.out.println("Enter the species of dinosaur you want: ");
+    System.out.println("Mosasaurus (m)");
+    System.out.println("Pantydraco (p)");
+    System.out.println("Pterodactyl (pt)");
+    System.out.println("Saltopus (s)");
+    System.out.println("Stegosaurus (st)");
+    System.out.println("Tyrannasaurus (ty)");
+    System.out.println("Triceratops (t)");
+    System.out.println("Veloceraptor (v)");
+    String choice = System.console().readLine();
+
+      switch (choice) {
+        case "m":
+          Mosasaurus mosasaurus = new Mosasaurus(name);
+          index();
+        case "p":
+          Pantydraco pantydraco = new Pantydraco(name);
+          index();
+        case "pt":
+          Pterodactyl pterodactyl = new Pterodactyl(name);
+          index();
+        case "s":
+          Saltopus saltopus = new Saltopus(name);
+          index();
+        case "st":
+          Stegosaurus stegosaurus = new Stegosaurus(name);
+          index();
+        case "ty":
+          Tyrannasaurus tyrannasaurus = new Tyrannasaurus(name);
+          index();
+        case "t":
+          Triceratops triceratops = new triceratops(name);
+          index();
+        case "v":
+          Veloceraptor veloceraptor = new Veloceraptor(name);
+          index(); 
+      }
+      return choice;
+  }
+
+
+
+  public void allDinosaursTakeADump() {
+  for (Enclosure enclosure : park.enclosures) {
+    ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+    for (Dinosaur dinosaur : dinosaurs) {
+      dinosaur.takeACrap();
+      }
+    }
+  }
+
+  public void rampageCheck() {
+    for (Enclosure enclosure : park.enclosures) {
+      ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+      for (Dinosaur dinosaur : dinosaurs) {
+        if (dinosaur.checkFood() == "Dinosaur starving") {
+          park.addEscapedDinosaur(dinosaur);
+          System.out.println(dinosaur.getName() + " is starving and has gone on a rampage! He's eaten some of the guests and the park has been evacuated!");
+        }
+      }
+    }
+  }
 
   public void nextTurn() {
     setNextDay();
     park.setParkPopularityLevel();
-    park.allDinosaursTakeADump();
-    park.rampageCheck();
+    allDinosaursTakeADump();
+    rampageCheck();
     park.calculateVisitorsAndFunds();
   }
 
