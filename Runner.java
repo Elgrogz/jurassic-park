@@ -14,7 +14,7 @@ public class Runner {
     Park park = new Park(name);
     System.out.println("\n" + park.getName() + " was founded on " + date + "! \n\nThe park is a huge success on its opening day! What could possibly go wrong?");
     
-    CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("Carnivore cage");
+    CarnivoreEnclosure carnivoreEnclosure = new CarnivoreEnclosure("Carnivore Cage");
     park.addEnclosure(carnivoreEnclosure);
     HerbivoreEnclosure herbivoreEnclosure = new HerbivoreEnclosure("Herbivore Cage");
     park.addEnclosure(herbivoreEnclosure);

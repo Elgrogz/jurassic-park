@@ -65,6 +65,17 @@ public class Park {
     }
     return nameToReturn;
   }
+
+  public Enclosure getEnclosureByName(String name) {
+    Enclosure enclosureToUse = null;
+    for (Enclosure enclosure : enclosures) {
+      String enclosureName = enclosure.getName();
+      if (enclosureName.equals(name)) {
+        enclosureToUse = enclosure;
+      }
+    }
+    return enclosureToUse;
+  }
   
   public int getParkPopularityLevel() {
     return this.parkPopularityLevel; 

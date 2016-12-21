@@ -95,6 +95,18 @@ public class ZooApp {
   }
 
   public void buyMenu() {
+    Enclosure aEnclosure = park.getEnclosureByName("Aquarium");
+    Aquarium aquarium = (Aquarium)aEnclosure;
+
+    Enclosure hEnclosure = park.getEnclosureByName("Herbivore Cage");
+    HerbivoreEnclosure herbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
+
+    Enclosure avEnclosure = park.getEnclosureByName("Aviary");
+    Aviary aviary = (Aviary)avEnclosure;
+
+    Enclosure cEnclosure = park.getEnclosureByName("Carnivore Cage");
+    CarnivoreEnclosure carnivoreEnclosure = (CarnivoreEnclosure)cEnclosure;
+
     System.out.println("Enter the name of your new dinosaur: ");
     String name = System.console().readLine();
 
@@ -109,6 +121,7 @@ public class ZooApp {
     System.out.println("Veloceraptor (v)");
     String choice = System.console().readLine();
 
+
       switch (choice) {
         case "m":
           Mosasaurus mosasaurus = new Mosasaurus(name);
@@ -116,6 +129,8 @@ public class ZooApp {
           index();
         case "p":
           Pantydraco pantydraco = new Pantydraco(name);
+          // Enclosure hEnclosure = park.getEnclosureByName("herbivoreEnclosure");
+          // HerbivoreEnclosure herbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(pantydraco);
           index();
         case "pt":
@@ -124,22 +139,28 @@ public class ZooApp {
           index();
         case "s":
           Saltopus saltopus = new Saltopus(name);
+          // HerbivoreEnclosure aHerbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(saltopus);
           index();
         case "st":
           Stegosaurus stegosaurus = new Stegosaurus(name);
+          // HerbivoreEnclosure bHerbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(stegosaurus);
           index();
         case "ty":
           Trex tyrannasaurus = new Trex(name);
+          // Enclosure cEnclosure = park.getEnclosureByName("carnivoreEnclosure");
+          // CarnivoreEnclosure carnivoreEnclosure = (CarnivoreEnclosure)cEnclosure;
           carnivoreEnclosure.addDinosaur(tyrannasaurus);
           index();
         case "t":
           Triceratops triceratops = new Triceratops(name);
+          // HerbivoreEnclosure cHerbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(triceratops);
           index();
         case "v":
           Veloceraptor veloceraptor = new Veloceraptor(name);
+          // CarnivoreEnclosure bCarnivoreEnclosure = (CarnivoreEnclosure)cEnclosure;
           carnivoreEnclosure.addDinosaur(veloceraptor);
           index(); 
       }
