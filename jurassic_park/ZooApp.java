@@ -4,10 +4,6 @@ import java.util.*;
 public class ZooApp {
 
   Park park;
-  CarnivoreEnclosure carnivoreEnclosure;
-  HerbivoreEnclosure herbivoreEnclosure;
-  Aquarium aquarium;
-  Aviary aviary;
   int dayCounter;
 
   public ZooApp(Park park) {
@@ -24,8 +20,7 @@ public class ZooApp {
   }
 
   public String index() {
-
-    System.out.println("\n-------Day " + getDay() + "-------");
+    System.out.println("\n---------Day " + getDay() + "---------");
     System.out.println("\nCurrent funds: £" + park.getFunds());
     System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
     System.out.println("\n----------Menu----------\n" );
@@ -55,7 +50,7 @@ public class ZooApp {
           index();
         case "x":
           System.out.println("\nClever Girl!");
-          break;
+          System.exit(0);
       }
       return choice;
   }
@@ -66,7 +61,7 @@ public class ZooApp {
         System.out.println("Enclosure Name: " + enclosure.getName() + "\nNumber of Dinosaurs: " + enclosure.getSize() + "\n");
         ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
         for (Dinosaur dinosaur : dinosaurs) {
-          System.out.println("Name: " + dinosaur.getName() + "\nFood Level: " + dinosaur.getFoodLevel() + "\nType: " + dinosaur.getType() + "\n");
+          System.out.println("Name: " + dinosaur.getName() + "        Food Level: " + dinosaur.getFoodLevel() + "        Type: " + dinosaur.getType() + "\n");
         }
       }
     }
@@ -174,7 +169,7 @@ public class ZooApp {
           park.addEscapedDinosaur(dinosaur);
           park.setFunds(park.getFunds() - 5000);
           dinosaur.setFoodLevel(5);
-          System.out.println(dinosaur.getName() + " is starving and has gone on a rampage! He's eaten some of the guests and the park has been evacuated!");
+          System.out.println(dinosaur.getName() + " is starving and has gone on a rampage! He's eaten some of the guests and the park has been evacuated! Cost to capture dinosaur and repair cage: £5000");
         }
       }
     }
@@ -184,6 +179,7 @@ public class ZooApp {
     setNextDay();
     park.setParkPopularityLevel();
     allDinosaursTakeADump();
+    park.removeAllEscapedDinosaurs();
     rampageCheck();
     park.calculateVisitorsAndFunds();
   }

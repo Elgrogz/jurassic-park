@@ -107,4 +107,8 @@ public class Park {
     escapedDinosaurs.remove(dinosaur);
   }
 
+  public void removeAllEscapedDinosaurs() {
+    escapedDinosaurs.clear();
+  }
+
 }
