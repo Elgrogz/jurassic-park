@@ -4,6 +4,10 @@ import java.util.*;
 public class ZooApp {
 
   Park park;
+  CarnivoreEnclosure carnivoreEnclosure;
+  HerbivoreEnclosure herbivoreEnclosure;
+  Aquarium aquarium;
+  Aviary aviary;
   int dayCounter;
 
   public ZooApp(Park park) {
@@ -43,7 +47,7 @@ public class ZooApp {
           feed();
           index();
         case "b":
-          System.out.println("Buy Dinosaur (b)");
+          buyMenu();
           index();
         case "n":
           System.out.println("\n Life always finds a way...");
@@ -108,33 +112,38 @@ public class ZooApp {
       switch (choice) {
         case "m":
           Mosasaurus mosasaurus = new Mosasaurus(name);
+          aquarium.addDinosaur(mosasaurus);
           index();
         case "p":
           Pantydraco pantydraco = new Pantydraco(name);
+          herbivoreEnclosure.addDinosaur(pantydraco);
           index();
         case "pt":
           Pterodactyl pterodactyl = new Pterodactyl(name);
+          aviary.addDinosaur(pterodactyl);
           index();
         case "s":
           Saltopus saltopus = new Saltopus(name);
+          herbivoreEnclosure.addDinosaur(saltopus);
           index();
         case "st":
           Stegosaurus stegosaurus = new Stegosaurus(name);
+          herbivoreEnclosure.addDinosaur(stegosaurus);
           index();
         case "ty":
-          Tyrannasaurus tyrannasaurus = new Tyrannasaurus(name);
+          Trex tyrannasaurus = new Trex(name);
+          carnivoreEnclosure.addDinosaur(tyrannasaurus);
           index();
         case "t":
-          Triceratops triceratops = new triceratops(name);
+          Triceratops triceratops = new Triceratops(name);
+          herbivoreEnclosure.addDinosaur(triceratops);
           index();
         case "v":
           Veloceraptor veloceraptor = new Veloceraptor(name);
+          carnivoreEnclosure.addDinosaur(veloceraptor);
           index(); 
       }
-      return choice;
   }
-
-
 
   public void allDinosaursTakeADump() {
   for (Enclosure enclosure : park.enclosures) {

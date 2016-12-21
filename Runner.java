@@ -26,8 +26,8 @@ public class Runner {
     carnivoreEnclosure.addDinosaur(trex);
     Stegosaurus stegosaurus = new Stegosaurus("Winston");
     herbivoreEnclosure.addDinosaur(stegosaurus);
-    Tricerotops tricerotops = new Tricerotops("Samuel");
-    herbivoreEnclosure.addDinosaur(tricerotops);
+    Triceratops triceratops = new Triceratops("Samuel");
+    herbivoreEnclosure.addDinosaur(triceratops);
     Veloceraptor veloceraptor = new Veloceraptor("Gordon");
     carnivoreEnclosure.addDinosaur(veloceraptor);
     Pterodactyl pterodactyl = new Pterodactyl("Wendy");

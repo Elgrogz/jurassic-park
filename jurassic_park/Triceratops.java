@@ -1,8 +1,8 @@
 package jurassic_park;
 
-public class Tricerotops extends Dinosaur implements Herbivore {
+public class Triceratops extends Dinosaur implements Herbivore {
 
-  public Tricerotops(String name){
+  public Triceratops(String name){
     super(name);
     this.type = DinosaurTypes.TRICERATOPS;
     this.popularityLevel = 3;
