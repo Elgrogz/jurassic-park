@@ -8,7 +8,7 @@ public class ParkTest {
   Park park;
   Trex trex;
   Stegosaurus stegosaurus;
-  Tricerotops tricerotops;
+  Triceratops triceratops;
   Veloceraptor veloceraptor;
   Pterodactyl pterodactyl;
   Pantydraco pantydraco;
@@ -28,7 +28,7 @@ public class ParkTest {
     aviary = new Aviary("Aviary");
     trex = new Trex("Jeff");
     stegosaurus = new Stegosaurus("Winston");
-    tricerotops = new Tricerotops("Samuel");
+    triceratops = new Triceratops("Samuel");
     veloceraptor = new Veloceraptor("Gordon");
     pterodactyl = new Pterodactyl("Wendy");
     pantydraco = new Pantydraco("Susan");
@@ -114,7 +114,7 @@ public class ParkTest {
     park.addEnclosure(aviary);
     carnivoreEnclosure.addDinosaur(trex);
     carnivoreEnclosure.addDinosaur(veloceraptor);
-    herbivoreEnclosure.addDinosaur(tricerotops);
+    herbivoreEnclosure.addDinosaur(triceratops);
     aviary.addDinosaur(pterodactyl);
     aquarium.addDinosaur(mosasaurus);
     park.setParkPopularityLevel();
@@ -129,7 +129,7 @@ public class ParkTest {
     park.addEnclosure(aviary);
     carnivoreEnclosure.addDinosaur(trex);
     carnivoreEnclosure.addDinosaur(veloceraptor);
-    herbivoreEnclosure.addDinosaur(tricerotops);
+    herbivoreEnclosure.addDinosaur(triceratops);
     aviary.addDinosaur(pterodactyl);
     aquarium.addDinosaur(mosasaurus);
     park.setParkPopularityLevel();
@@ -145,7 +145,7 @@ public class ParkTest {
     park.addEnclosure(aviary);
     carnivoreEnclosure.addDinosaur(trex);
     carnivoreEnclosure.addDinosaur(veloceraptor);
-    herbivoreEnclosure.addDinosaur(tricerotops);
+    herbivoreEnclosure.addDinosaur(triceratops);
     aviary.addDinosaur(pterodactyl);
     aquarium.addDinosaur(mosasaurus);
     assertEquals(0, park.getFunds());

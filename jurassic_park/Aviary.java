@@ -22,14 +22,6 @@ public class Aviary extends Enclosure {
     dinosaurs.remove(flyer);
   }
 
-  public int getEnclosurePopularity() {
-    int result = 0;
-    for (Flyable dinosaur : dinosaurs) {
-      result += dinosaur.getPopularityLevel();
-    }
-    return result;
-  }
-
   public ArrayList<Dinosaur> returnDinosaurs() {
     ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
     for (Flyable flyer : dinosaurs) {

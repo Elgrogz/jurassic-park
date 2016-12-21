@@ -47,7 +47,7 @@ public abstract class Dinosaur {
     setFoodLevel(5);
   }
 
-  public void takeACrap() {
+  public void jobbie() {
     this.foodLevel -= 1; 
     checkFood();
   }
@@ -64,8 +64,8 @@ public abstract class Dinosaur {
     return null;
   }
 
-  public String info() {
-    return "Name: " + getName() + ", Current Food Level: " + getFoodLevel();
+  public String getInfo() {
+    return "Name: " + getName() + " - Current Food Level: " + getFoodLevel() + " - Species: " + getType() + "\n";
   }
 
 }

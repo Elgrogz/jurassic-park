@@ -7,7 +7,7 @@ public class DinosaurTest {
 
   Trex trex;
   Stegosaurus stegosaurus;
-  Tricerotops tricerotops;
+  Triceratops triceratops;
   Veloceraptor veloceraptor;
   Pterodactyl pterodactyl;
   Pantydraco pantydraco;
@@ -18,7 +18,7 @@ public class DinosaurTest {
   public void before() {
     trex = new Trex("Jeff");
     stegosaurus = new Stegosaurus("Winston");
-    tricerotops = new Tricerotops("Samuel");
+    triceratops = new Triceratops("Samuel");
     veloceraptor = new Veloceraptor("Gordon");
     pterodactyl = new Pterodactyl("Wendy");
     pantydraco = new Pantydraco("Susan");
@@ -60,22 +60,22 @@ public class DinosaurTest {
   }
 
   @Test
-  public void canTakeACrap() {
-    stegosaurus.takeACrap();
+  public void canDoAJobbie() {
+    stegosaurus.jobbie();
     assertEquals(4, stegosaurus.getFoodLevel());
   }
 
   @Test
   public void canEat() {
-    mosasaurus.takeACrap();
-    mosasaurus.takeACrap();
+    mosasaurus.jobbie();
+    mosasaurus.jobbie();
     mosasaurus.eat();
     assertEquals(5, mosasaurus.getFoodLevel());
   }
 
   @Test
   public void canGetInfo() {
-    assertEquals("Name: Wendy, Current Food Level: 5", pterodactyl.info());
+    assertEquals("Name: Wendy - Current Food Level: 5 - Species: PTERODACTYL\n", pterodactyl.getInfo());
   }
 
 }

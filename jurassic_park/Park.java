@@ -56,6 +56,10 @@ public class Park {
     enclosures.add(enclosure);
   }
 
+  public void removeEnclosure(Enclosure enclosure) {
+    enclosures.remove(enclosure);
+  }
+
   public String getEnclosureName(Enclosure enclosureToFind) {
     String nameToReturn = null;
     for (Enclosure enclosure : enclosures) {
@@ -84,9 +88,12 @@ public class Park {
   public void setParkPopularityLevel() {
     int result = 0;
     for (Enclosure enclosure : enclosures) {
-      result += enclosure.getEnclosurePopularity();
+        ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
+        for (Dinosaur dinosaur : dinosaurs) {
+        result += dinosaur.getPopularityLevel();
+      }
+      this.parkPopularityLevel = result;
     }
-    this.parkPopularityLevel = result;
   }
 
   public void calculateVisitorsAndFunds() {

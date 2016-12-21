@@ -27,7 +27,7 @@ public abstract class Enclosure {
     this.damaged = true;
   }
 
-  public abstract int getEnclosurePopularity();
+  // public abstract int getEnclosurePopularity();
   public abstract ArrayList<Dinosaur> returnDinosaurs();
   public abstract int getSize();
 

@@ -7,7 +7,7 @@ public class EnclosureTest {
 
   Trex trex;
   Stegosaurus stegosaurus;
-  Tricerotops tricerotops;
+  Triceratops triceratops;
   Veloceraptor veloceraptor;
   Pterodactyl pterodactyl;
   Pantydraco pantydraco;
@@ -22,7 +22,7 @@ public class EnclosureTest {
   public void before() {
     trex = new Trex("Jeff");
     stegosaurus = new Stegosaurus("Winston");
-    tricerotops = new Tricerotops("Samuel");
+    triceratops = new Triceratops("Samuel");
     veloceraptor = new Veloceraptor("Gordon");
     pterodactyl = new Pterodactyl("Wendy");
     pantydraco = new Pantydraco("Susan");
@@ -52,9 +52,8 @@ public class EnclosureTest {
 
   @Test
   public void canAddHerbivore() {
-    herbivoreEnclosure.addDinosaur(tricerotops);
+    herbivoreEnclosure.addDinosaur(triceratops);
     assertEquals(1, herbivoreEnclosure.getSize()); 
-    assertEquals(3, herbivoreEnclosure.getEnclosurePopularity());
   }
 
   @Test
@@ -76,10 +75,11 @@ public class EnclosureTest {
     assertEquals(0, aviary.getSize()); 
   } 
 
-  @Test
-  public void canGetPopularity() {
-    carnivoreEnclosure.addDinosaur(trex);
-    carnivoreEnclosure.addDinosaur(veloceraptor);
-    assertEquals(9, carnivoreEnclosure.getEnclosurePopularity());
-  }
+//function called from park straight to dinosaur and avoids enclosure
+  // @Test
+  // public void canGetPopularity() {
+  //   carnivoreEnclosure.addDinosaur(trex);
+  //   carnivoreEnclosure.addDinosaur(veloceraptor);
+  //   assertEquals(9, carnivoreEnclosure.getEnclosurePopularity());
+  // }
 }

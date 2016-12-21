@@ -27,6 +27,7 @@ public class ZooApp {
     System.out.println("---View Enclosures (e)");
     System.out.println("---Feed Dinosaur (f)");
     System.out.println("---Buy Dinosaur (b)");
+    // System.out.println("---Sell Dinosaur (s)");
     System.out.println("---Next Turn (n)");
     System.out.println("---Exit (x)");
     System.out.println("\nWhat would you like to do?");
@@ -44,12 +45,12 @@ public class ZooApp {
         case "b":
           buyMenu();
           index();
-        case "r":
-          listAllDinosaurs();
-          remove();
-          index();
+        // case "s":
+        //   listAllDinosaurs();
+        //   sell();
+        //   index();
         case "n":
-          System.out.println("\n Life always finds a way...");
+          System.out.println("\nLife always finds a way...");
           nextTurn();
           index();
         case "x":
@@ -65,7 +66,7 @@ public class ZooApp {
         System.out.println("Enclosure Name: " + enclosure.getName() + "\nNumber of Dinosaurs: " + enclosure.getSize() + "\n");
         ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
         for (Dinosaur dinosaur : dinosaurs) {
-          System.out.println("Name: " + dinosaur.getName() + "        Food Level: " + dinosaur.getFoodLevel() + "        Type: " + dinosaur.getType() + "\n");
+          System.out.println(dinosaur.getInfo());
         }
       }
     }
@@ -74,7 +75,7 @@ public class ZooApp {
     for (Enclosure enclosure : park.enclosures) {
       ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
         for (Dinosaur dinosaur : dinosaurs) {
-          System.out.println("Name: " + dinosaur.getName() + "          Food Level: " + dinosaur.getFoodLevel() + "          Type: " + dinosaur.getType() + "\n");
+          System.out.println(dinosaur.getInfo());
       }
     }
   }
@@ -93,18 +94,20 @@ public class ZooApp {
       }
   }
 
-  public void remove() {
-    System.out.println("Enter the name of the dinosaur you want to remove: ");
-    String dinosaurToDelete = System.console().readLine();
-      for (Enclosure enclosure : park.enclosures) {
-        ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
-          for (Dinosaur dinosaur : dinosaurs) {
-            if (dinosaurToDelete.equals(dinosaur.getName())) {
-              enclosure.removeDinosaur(dinosaur);
-            }
-          }
-      }
-  }
+//not working
+
+  // public void sell() {
+  //   System.out.println("Enter the name of the dinosaur you want to sell: ");
+  //   String dinosaurToDelete = System.console().readLine();
+  //     for (Enclosure enclosure : park.enclosures) {
+  //         for (Dinosaur dinosaur : dinosaurs) {
+  //           if (dinosaurToDelete.equals(dinosaur.getName())) {
+  //             enclosure.removeDinosaur(dinosaur);
+  //             park.setFunds(park.getFunds() + 1000);
+  //           }
+  //         }
+  //     }
+  // }
 
   public void buyMenu() {
     Enclosure aEnclosure = park.getEnclosureByName("Aquarium");
@@ -169,11 +172,11 @@ public class ZooApp {
       }
   }
 
-  public void allDinosaursTakeADump() {
+  public void allDinosaursDoAJobbie() {
   for (Enclosure enclosure : park.enclosures) {
     ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
     for (Dinosaur dinosaur : dinosaurs) {
-      dinosaur.takeACrap();
+      dinosaur.jobbie();
       }
     }
   }
@@ -195,10 +198,11 @@ public class ZooApp {
   public void nextTurn() {
     setNextDay();
     park.setParkPopularityLevel();
-    allDinosaursTakeADump();
+    allDinosaursDoAJobbie();
     park.removeAllEscapedDinosaurs();
     rampageCheck();
     park.calculateVisitorsAndFunds();
+    index();
   }
 
   public void play() {

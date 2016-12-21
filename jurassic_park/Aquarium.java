@@ -18,17 +18,8 @@ public class Aquarium extends Enclosure {
     dinosaurs.add(swimmer);
   }
 
-  public void deleteDinosaur(Swimmable swimmer) {  
+  public void removeDinosaur(Swimmable swimmer) {  
     dinosaurs.remove(swimmer);
-  }
-
-  @Override
-  public int getEnclosurePopularity() {
-    int result = 0;
-    for (Swimmable dinosaur : dinosaurs) {
-      result += dinosaur.getPopularityLevel();
-    }
-    return result;
   }
 
   public ArrayList<Dinosaur> returnDinosaurs() {

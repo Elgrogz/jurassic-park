@@ -22,14 +22,6 @@ public class HerbivoreEnclosure extends Enclosure {
     dinosaurs.remove(herbivore);
   }
 
-  public int getEnclosurePopularity() {
-    int result = 0;
-    for (Herbivore dinosaur : dinosaurs) {
-      result += dinosaur.getPopularityLevel();
-    }
-    return result;
-  }
-
   public ArrayList<Dinosaur> returnDinosaurs() {
     ArrayList<Dinosaur> dinos = new ArrayList<Dinosaur>();
     for (Herbivore herbivore : dinosaurs) {
