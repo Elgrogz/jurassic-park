@@ -24,7 +24,7 @@ public class ZooApp {
     System.out.println("\nCurrent funds: £" + park.getFunds());
     System.out.println("Current visitor numbers: " + park.getVisitorNumbers());
     System.out.println("\n----------Menu----------\n" );
-    System.out.println("---View Enclosures (e)");
+    System.out.println("---View Enclosures (v)");
     System.out.println("---Feed Dinosaur (f)");
     System.out.println("---Buy Dinosaur (b)");
     // System.out.println("---Sell Dinosaur (s)");
@@ -35,7 +35,7 @@ public class ZooApp {
     String choice = System.console().readLine();
 
       switch (choice) {
-        case "e":
+        case "v":
           getEnclosuresStatus();
           index();
         case "f":
