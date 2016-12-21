@@ -86,9 +86,9 @@ public class ZooApp {
     for (Enclosure enclosure : park.enclosures) {
       ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
         for (Dinosaur dinosaur : dinosaurs) {
-          if (dinosaurToFeed == dinosaur.getName()) {
+          if (dinosaurToFeed.equals(dinosaur.getName())) {
             dinosaur.eat();
-            park.setFunds(-1000);
+            park.setFunds(park.getFunds() - 1000);
           }
         }
       }
@@ -129,8 +129,6 @@ public class ZooApp {
           index();
         case "p":
           Pantydraco pantydraco = new Pantydraco(name);
-          // Enclosure hEnclosure = park.getEnclosureByName("herbivoreEnclosure");
-          // HerbivoreEnclosure herbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(pantydraco);
           index();
         case "pt":
@@ -139,28 +137,22 @@ public class ZooApp {
           index();
         case "s":
           Saltopus saltopus = new Saltopus(name);
-          // HerbivoreEnclosure aHerbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(saltopus);
           index();
         case "st":
           Stegosaurus stegosaurus = new Stegosaurus(name);
-          // HerbivoreEnclosure bHerbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(stegosaurus);
           index();
         case "ty":
           Trex tyrannasaurus = new Trex(name);
-          // Enclosure cEnclosure = park.getEnclosureByName("carnivoreEnclosure");
-          // CarnivoreEnclosure carnivoreEnclosure = (CarnivoreEnclosure)cEnclosure;
           carnivoreEnclosure.addDinosaur(tyrannasaurus);
           index();
         case "t":
           Triceratops triceratops = new Triceratops(name);
-          // HerbivoreEnclosure cHerbivoreEnclosure = (HerbivoreEnclosure)hEnclosure;
           herbivoreEnclosure.addDinosaur(triceratops);
           index();
         case "v":
           Veloceraptor veloceraptor = new Veloceraptor(name);
-          // CarnivoreEnclosure bCarnivoreEnclosure = (CarnivoreEnclosure)cEnclosure;
           carnivoreEnclosure.addDinosaur(veloceraptor);
           index(); 
       }
@@ -179,8 +171,9 @@ public class ZooApp {
     for (Enclosure enclosure : park.enclosures) {
       ArrayList<Dinosaur> dinosaurs = enclosure.returnDinosaurs();
       for (Dinosaur dinosaur : dinosaurs) {
-        if (dinosaur.checkFood() == "Dinosaur starving") {
+        if (dinosaur.checkFood() == ("Dinosaur starving")) {
           park.addEscapedDinosaur(dinosaur);
+          park.setFunds(park.getFunds() - 5000);
           System.out.println(dinosaur.getName() + " is starving and has gone on a rampage! He's eaten some of the guests and the park has been evacuated!");
         }
       }
