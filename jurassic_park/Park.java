@@ -8,7 +8,7 @@ public class Park {
   ArrayList<Enclosure> enclosures;
   int parkPopularityLevel;
   int currentVisitors;
-  BankAccount bankAccount;
+  int funds;
 
 
   public Park(String name) {
@@ -17,7 +17,7 @@ public class Park {
     this.escapedDinosaurs = new ArrayList<Dinosaur>();
     this.parkPopularityLevel = 0;
     this.currentVisitors = 0;
-    this.bankAccount = new BankAccount();
+    this.funds = 0;
   }
 
   public String getName() {
@@ -29,7 +29,7 @@ public class Park {
   }
 
   public int getFunds() {
-    return bankAccount.funds;
+    return this.funds;
   }
 
   public int getNumOfEscapedDinosaurs() {
@@ -49,7 +49,7 @@ public class Park {
   }
 
   public void setFunds(int funds) {
-    this.bankAccount.funds = funds;
+    this.funds = funds;
   }
 
   public void addEnclosure(Enclosure enclosure) {
